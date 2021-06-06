@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="145.0" prefWidth="237.0" spacing="5.0"
+      style="-fx-control-inner-background: #fcf1d4; -fx-background-color: #f5e3b3; -fx-text-fill: #453303;"
+      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="MyChatProject.ControllerAuthWindow">
+    <HBox>
+        <Label fx:id="loginWelcome" prefHeight="18.0" prefWidth="63.0" text="Логин: " textFill="#7f1111"
+               GridPane.halignment="RIGHT" GridPane.rowIndex="16" HBox.hgrow="NEVER">
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+            <padding>
+                <Insets right="10.0"/>
+            </padding>
+        </Label>
+        <TextField fx:id="loginField" onAction="#txtRegistrLogin" HBox.hgrow="ALWAYS">
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+        </TextField>
+    </HBox>
+    <HBox>
+        <Label fx:id="passWelcome" prefHeight="18.0" prefWidth="62.0" text="Пароль: " textFill="#7f1111"
+               GridPane.halignment="RIGHT" GridPane.rowIndex="16" HBox.hgrow="NEVER"/>
+        <TextField fx:id="passField" onAction="#txtRegistrPass" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <Button fx:id="authButton" maxWidth="-Infinity" onAction="#btnMakeAuth"
+            style="-fx-control-inner-background: #c79d30; -fx-background-color: #c79d30;" text="Авторизироваться">
+        <VBox.margin>
+            <Insets top="10.0"/>
+        </VBox.margin>
+    </Button>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+</VBox>
